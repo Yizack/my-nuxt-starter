@@ -11,7 +11,7 @@ export default {
         "data-bs-theme": "dark"
       },
       meta: [
-        { name: "robots", content: "index, follow" },
+        { name: "robots", content: "index, follow" }
       ]
     }
   },
@@ -19,5 +19,5 @@ export default {
     "bootstrap/dist/css/bootstrap.min.css"
   ],
   modules: [],
-  runtimeConfig: {},
+  runtimeConfig: {}
 };

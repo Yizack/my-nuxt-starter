@@ -1,4 +1,4 @@
-export default {
+export default defineNuxtConfig({
   app: {
     head: {
       charset: "utf-8",
@@ -20,4 +20,4 @@ export default {
   ],
   modules: [],
   runtimeConfig: {}
-};
+});

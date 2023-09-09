@@ -20,4 +20,7 @@ export default defineNuxtConfig({
   ],
   modules: [],
   runtimeConfig: {},
+  experimental: {
+    inlineSSRStyles: false
+  }
 });

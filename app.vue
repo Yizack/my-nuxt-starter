@@ -5,8 +5,6 @@ setScrollBehavior();
 <template>
   <NuxtLoadingIndicator :throttle="0" />
   <NuxtLayout>
-    <div id="page">
-      <NuxtPage />
-    </div>
+    <NuxtPage />
   </NuxtLayout>
 </template>

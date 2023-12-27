@@ -1,3 +1,10 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
-  Vue Component
+  <!-- Components: keep single root, everything goes inside 'div' -->
+  <div>
+    <p>Vue Component</p>
+  </div>
 </template>

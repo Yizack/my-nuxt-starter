@@ -1,3 +1,10 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
-  Hello World
+  <!-- Pages: keep single root, everything goes inside 'main' -->
+  <main>
+    <p>Hello World</p>
+  </main>
 </template>

@@ -1,16 +1,16 @@
 {
-  "name": "my-nuxt-template",
+  "name": "my-nuxt-starter",
   "version": "1.0.0",
   "description": "Yizack nuxt template",
   "author": "Yizack Rangel",
   "type": "module",
-  "homepage": "https://github.com/Yizack/my-nuxt-template",
+  "homepage": "https://github.com/Yizack/my-nuxt-starter",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Yizack/my-nuxt-template"
+    "url": "https://github.com/Yizack/my-nuxt-starter"
   },
   "bugs": {
-    "url": "https://github.com/Yizack/my-nuxt-template/issues"
+    "url": "https://github.com/Yizack/my-nuxt-starter/issues"
   },
   "scripts": {
     "build": "nuxt build",

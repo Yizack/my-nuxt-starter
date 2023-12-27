@@ -4,3 +4,7 @@ node_modules
 dist
 package-lock.json
 .env
+db.sqlite
+scripts/*.js
+*.sqlite3
+/*.sql

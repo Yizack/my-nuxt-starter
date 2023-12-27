@@ -13,7 +13,9 @@ export default defineNuxtConfig({
     }
   },
   css: [
-    "bootstrap/dist/css/bootstrap.min.css"
+    "bootstrap/dist/css/bootstrap.min.css",
+    "~/assets/css/main.css",
+    "~/assets/css/transitions.css",
   ],
   modules: [
     "nuxt-icon",

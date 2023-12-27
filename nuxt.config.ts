@@ -23,8 +23,8 @@ export default defineNuxtConfig({
     "nuxt-simple-sitemap"
   ],
   runtimeConfig: {},
-  experimental: {
-    inlineSSRStyles: false
+  features: {
+    inlineStyles: false
   },
   colorMode: {
     preference: "light",

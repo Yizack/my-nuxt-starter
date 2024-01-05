@@ -17,7 +17,10 @@
     "dev": "nuxt dev --port=5173 --host",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "npm run lint:eslint && npm run lint:stylelint",
+    "lint:eslint": "eslint --ext .ts,.js,.vue --fix --ignore-path .gitignore .",
+    "lint:stylelint": "stylelint \"**/*.css\" --fix"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.2.0",

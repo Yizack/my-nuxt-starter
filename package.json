@@ -27,7 +27,7 @@
     "@nuxtjs/color-mode": "^3.3.2",
     "@types/bootstrap": "^5.2.10",
     "eslint": "^8.56.0",
-    "nuxt": "^3.9.1",
+    "nuxt": "^3.10.0",
     "nuxt-icon": "^0.6.8",
     "nuxt-simple-sitemap": "^4.4.1",
     "stylelint-config-standard": "^36.0.0"

@@ -9,8 +9,9 @@ import Toast from "bootstrap/js/dist/toast";
 import Tab from "bootstrap/js/dist/tab";
 
 class Bootstrap {
-  hideModal (id: HTMLElement) {
-    const instance = Modal.getInstance(id);
+  hideModal (id: HTMLElement | string) {
+    const el = typeof id === "string" ? `#${id}` : id;
+    const instance = Modal.getInstance(el);
     if (instance) instance.hide();
   }
 
@@ -25,14 +26,16 @@ class Bootstrap {
     });
   }
 
-  showModal (id: HTMLElement) {
-    const modal = new Modal(id);
+  showModal (id: HTMLElement | string) {
+    const el = typeof id === "string" ? `#${id}` : id;
+    const modal = new Modal(el);
     modal.show();
     return id;
   }
 
-  showToast (id: HTMLElement) {
-    const instance = Toast.getInstance(id);
+  showToast (id: HTMLElement | string) {
+    const el = typeof id === "string" ? `#${id}` : id;
+    const instance = Toast.getInstance(el);
     if (instance) return;
     const toast = new Toast(id);
     toast.show();
@@ -52,8 +55,9 @@ class Bootstrap {
     [...popoverList].map(e => new Popover(e, { trigger: "focus" }));
   }
 
-  showOffcanvas (id: HTMLElement) {
-    const offcanvas = new Offcanvas(id);
+  showOffcanvas (id: HTMLElement | string) {
+    const el = typeof id === "string" ? `#${id}` : id;
+    const offcanvas = new Offcanvas(el);
     offcanvas.show();
     return id;
   }

@@ -1,26 +1,26 @@
-.tab-enter-active,
-.tab-leave-active,
-.tab-right-enter-active,
-.tab-right-leave-active,
-.tab-left-enter-active,
-.tab-left-leave-active {
+.slide-enter-active,
+.slide-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active {
   transition: all 0.2s;
 }
 
-.tab-enter-from,
-.tab-leave-to {
+.slide-enter-from,
+.slide-leave-to {
   opacity: 0;
   transform: translate(0, -10px);
 }
 
-.tab-right-enter-from,
-.tab-right-leave-to {
+.slide-right-enter-from,
+.slide-right-leave-to {
   opacity: 0;
   transform: translate(10px, 0);
 }
 
-.tab-left-enter-from,
-.tab-left-leave-to {
+.slide-left-enter-from,
+.slide-left-leave-to {
   opacity: 0;
   transform: translate(-10px, 0);
 }

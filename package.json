@@ -25,14 +25,12 @@
   "devDependencies": {
     "@nuxt/eslint-config": "^0.2.0",
     "@nuxtjs/color-mode": "^3.3.2",
+    "@nuxtjs/sitemap": "^5.1.0",
     "@types/bootstrap": "^5.2.10",
+    "bootstrap": "^5.3.2",
     "eslint": "^8.56.0",
     "nuxt": "^3.10.1",
     "nuxt-icon": "^0.6.8",
-    "nuxt-simple-sitemap": "^4.4.1",
     "stylelint-config-standard": "^36.0.0"
-  },
-  "dependencies": {
-    "bootstrap": "^5.3.2"
   }
 }

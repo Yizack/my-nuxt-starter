@@ -12,7 +12,7 @@ My minimal Nuxt + Typescript + Bootstrap starter template for creating webapps.
 - Some Vue transitions ([`assets/css/transitions.css`](assets/css/transitions.css))
 - Color modes (`@nuxtjs/color-mode`)
 - Icon component (`nuxt-icon`)
-- Sitemap generator (`nuxt-simple-sitemap`)
+- Sitemap generator (`@nuxtjs/sitemap`)
 
 # Install
 

@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   modules: [
     "nuxt-icon",
     "@nuxtjs/color-mode",
-    "nuxt-simple-sitemap"
+    "@nuxtjs/sitemap"
   ],
   runtimeConfig: {},
   features: {

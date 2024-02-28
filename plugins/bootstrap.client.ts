@@ -1,6 +1,6 @@
 import "bootstrap/js/dist/dropdown";
-import "bootstrap/js/dist/tooltip";
 import "bootstrap/js/dist/collapse";
+import Tooltip from "bootstrap/js/dist/tooltip";
 import Offcanvas from "bootstrap/js/dist/offcanvas";
 import Popover from "bootstrap/js/dist/popover";
 import Carousel from "bootstrap/js/dist/carousel";
@@ -52,7 +52,12 @@ class Bootstrap {
 
   initializePopover () {
     const popoverList = document.querySelectorAll("[data-bs-toggle=\"popover\"]");
-    [...popoverList].map(e => new Popover(e, { trigger: "focus" }));
+    [...popoverList].map(e => new Popover(e, { trigger: "hover" }));
+  }
+
+  initializeTooltip () {
+    const tooltipList = document.querySelectorAll("[data-bs-toggle=\"tooltip\"]");
+    [...tooltipList].map(e => new Tooltip(e, { trigger: "hover" }));
   }
 
   showOffcanvas (id: HTMLElement | string) {

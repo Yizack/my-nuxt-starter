@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     "~/assets/css/transitions.css",
   ],
   modules: [
+    "@nuxt/eslint",
     "nuxt-icon",
     "@nuxtjs/color-mode",
     "@nuxtjs/sitemap"

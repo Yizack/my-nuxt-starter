@@ -19,17 +19,17 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "npm run lint:eslint && npm run lint:stylelint",
-    "lint:eslint": "eslint --fix",
-    "lint:stylelint": "stylelint \"**/*.css\" --fix"
+    "lint:eslint": "eslint --fix --config .config/eslint.mjs",
+    "lint:stylelint": "stylelint \"**/*.css\" --fix --config .config/stylelint.json"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^0.3.10",
+    "@nuxt/eslint": "^0.3.13",
     "@nuxtjs/color-mode": "^3.4.1",
-    "@nuxtjs/sitemap": "^5.1.4",
+    "@nuxtjs/sitemap": "^5.2.0",
     "@types/bootstrap": "^5.2.10",
     "bootstrap": "^5.3.3",
-    "eslint": "^9.2.0",
-    "nuxt": "^3.11.2",
+    "eslint": "^9.5.0",
+    "nuxt": "^3.12.2",
     "nuxt-icon": "^0.6.10",
     "stylelint-config-standard": "^36.0.0"
   }

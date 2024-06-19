@@ -23,6 +23,11 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxtjs/sitemap"
   ],
+  eslint: {
+    config: {
+      autoInit: false
+    }
+  },
   runtimeConfig: {},
   features: {
     inlineStyles: false

@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   css: [
     "bootstrap/dist/css/bootstrap.min.css",
     "~/assets/css/main.css",
-    "~/assets/css/transitions.css",
+    "~/assets/css/transitions.css"
   ],
   modules: [
     "@nuxt/eslint",
@@ -25,7 +25,8 @@ export default defineNuxtConfig({
   ],
   eslint: {
     config: {
-      autoInit: false
+      autoInit: false,
+      stylistic: true
     }
   },
   runtimeConfig: {},
@@ -43,7 +44,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      routes: ["/sitemap.xml"],
+      routes: ["/sitemap.xml"]
     }
   },
   sitemap: {

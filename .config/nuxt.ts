@@ -50,7 +50,7 @@ export default defineNuxtConfig({
     xslColumns: [
       { label: "URL", width: "65%" },
       { label: "Priority", select: "sitemap:priority", width: "12.5%" },
-      { label: "Last Modified", select: "sitemap:lastmod", width: "35%" },
+      { label: "Last Modified", select: "sitemap:lastmod", width: "35%" }
     ]
   },
   routeRules: {

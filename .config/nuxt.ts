@@ -13,16 +13,15 @@ export default defineNuxtConfig({
     }
   },
   css: [
-    "bootstrap/dist/css/bootstrap.min.css",
-    "~/assets/css/main.css",
-    "~/assets/css/transitions.css"
+    "~/assets/scss/app.scss"
   ],
   modules: [
     "@nuxt/eslint",
-    "nuxt-icon",
+    "@nuxt/icon",
     "@nuxtjs/color-mode",
     "@nuxtjs/sitemap"
   ],
+  icon: { mode: "svg" },
   eslint: {
     config: {
       autoInit: false,
@@ -39,9 +38,7 @@ export default defineNuxtConfig({
     dataValue: "bs-theme",
     storageKey: "nuxt-color-mode"
   },
-  site: {
-    url: ""
-  },
+  site: { url: "" },
   nitro: {
     prerender: {
       routes: ["/sitemap.xml"]
@@ -52,11 +49,12 @@ export default defineNuxtConfig({
     xslColumns: [
       { label: "URL", width: "65%" },
       { label: "Priority", select: "sitemap:priority", width: "12.5%" },
-      { label: "Last Modified", select: "sitemap:lastmod", width: "35%" }
+      { label: "Last Modified", select: "sitemap:lastmod", width: "35%" },
     ]
   },
   routeRules: {
     "/": { sitemap: { priority: 1 } },
-    "/*/**": { sitemap: { priority: 0.8, lastmod: new Date().toISOString() } }
+    "/*/**": { sitemap: { priority: 0.8, lastmod: new Date().toISOString() } },
+    "/api/_nuxt_icon/**": { cache: { maxAge: 1.577e+7 } }
   }
 });

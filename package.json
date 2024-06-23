@@ -18,20 +18,22 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "npm run lint:eslint && npm run lint:stylelint",
-    "lint:eslint": "eslint --fix --config .config/eslint.mjs",
-    "lint:stylelint": "stylelint \"**/*.css\" --fix --config .config/stylelint.json"
+    "lint": "pnpm lint:eslint --fix && pnpm lint:stylelint --fix",
+    "lint:eslint": "eslint --config .config/eslint.mjs",
+    "lint:stylelint": "stylelint \"**/*.scss\" --config .config/stylelint.json",
+    "lint:eslint:inspect": "npx @eslint/config-inspector --config .config/eslint.mjs"
   },
   "devDependencies": {
     "@nuxt/eslint": "^0.3.13",
+    "@nuxt/icon": "^1.0.0",
     "@nuxtjs/color-mode": "^3.4.1",
     "@nuxtjs/sitemap": "^5.2.0",
     "@types/bootstrap": "^5.2.10",
     "bootstrap": "^5.3.3",
     "eslint": "^9.5.0",
     "nuxt": "^3.12.2",
-    "nuxt-icon": "^0.6.10",
+    "sass": "^1.77.6",
     "stylelint": "^16.6.1",
-    "stylelint-config-standard": "^36.0.1"
+    "stylelint-config-standard-scss": "^13.1.0"
   }
 }

@@ -20,7 +20,7 @@
     "postinstall": "nuxt prepare",
     "lint": "pnpm lint:eslint --fix && pnpm lint:stylelint --fix",
     "lint:eslint": "eslint --config .config/eslint.mjs",
-    "lint:stylelint": "stylelint \"**/*.scss\" --config .config/stylelint.json",
+    "lint:stylelint": "stylelint \"**/*.{css,scss,sass}\" --config .config/stylelint.json",
     "lint:eslint:inspect": "npx @eslint/config-inspector --config .config/eslint.mjs",
     "test:types": "vue-tsc --noEmit"
   },
@@ -37,6 +37,7 @@
     "stylelint": "^16.6.1",
     "stylelint-config-standard-scss": "^13.1.0",
     "typescript": "^5.5.3",
-    "vue-tsc": "^2.0.24"
-  }
+    "vue-tsc": "^2.0.26"
+  },
+  "packageManager": "pnpm@9.5.0"
 }

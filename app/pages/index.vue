@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <!-- Pages: keep single root, everything goes inside 'main' -->
   <main>
+    <!-- Pages: keep single root, everything goes inside 'main' -->
     <p>Hello World</p>
   </main>
 </template>

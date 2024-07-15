@@ -56,5 +56,9 @@ export default defineNuxtConfig({
     "/": { sitemap: { priority: 1 } },
     "/*/**": { sitemap: { priority: 0.8, lastmod: new Date().toISOString() } },
     "/api/_nuxt_icon/**": { cache: { maxAge: 1.577e+7 } }
-  }
+  },
+  experimental: {
+    typedPages: true
+  },
+  devtools: { enabled: true }
 });

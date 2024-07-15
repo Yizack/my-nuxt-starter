@@ -27,15 +27,20 @@ class Bootstrap {
   }
 
   showModal (id: HTMLElement | string) {
-    const el = typeof id === "string" ? `#${id}` : id;
-    const modal = new Modal(el);
+    const element = typeof id === "string" ? document.querySelector(`#${id}`) : id;
+    if (!element) return;
+    const instance = Modal.getInstance(element);
+    if (instance) {
+      instance.show();
+      return element;
+    }
+    const modal = new Modal(element);
     modal.show();
-    return id;
+    return element;
   }
 
-  showToast (id: HTMLElement | string) {
-    const el = typeof id === "string" ? `#${id}` : id;
-    const instance = Toast.getInstance(el);
+  showToast (id: HTMLElement) {
+    const instance = Toast.getInstance(id);
     if (instance) return;
     const toast = new Toast(id);
     toast.show();

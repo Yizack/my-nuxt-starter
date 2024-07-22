@@ -22,7 +22,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxtjs/sitemap"
   ],
-  icon: { mode: "svg" },
+  icon: { mode: "svg", serverBundle: "remote" },
   eslint: {
     config: {
       autoInit: false,

@@ -20,9 +20,10 @@ class Bootstrap {
       if (e.key !== "Escape") return;
       const modals = document.querySelectorAll(".modal.show");
       if (!modals.length) return;
-      const id = modals[modals.length - 1]!.id;
-      const instance = Modal.getInstance("#" + id);
-      if (instance) instance.hide();
+      const modalId = modals[modals.length - 1]?.id;
+      if (!modalId) return;
+      const instance = Modal.getInstance(`#${modalId}`);
+      instance?.hide();
     });
   }
 

@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   future: { compatibilityVersion: 4 },
+  devtools: { enabled: true },
   app: {
     head: {
       charset: "utf-8",
@@ -8,6 +9,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en"
       },
+      link: [],
       meta: [
         { name: "robots", content: "index, follow" }
       ]
@@ -22,7 +24,11 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxtjs/sitemap"
   ],
-  icon: { mode: "svg", serverBundle: "remote" },
+  icon: {
+    mode: "svg",
+    serverBundle: "remote",
+    clientBundle: { scan: true, sizeLimitKb: 2048 }
+  },
   eslint: {
     config: {
       autoInit: false,
@@ -30,9 +36,6 @@ export default defineNuxtConfig({
     }
   },
   runtimeConfig: {},
-  features: {
-    inlineStyles: false
-  },
   colorMode: {
     preference: "light",
     fallback: "light",
@@ -43,9 +46,20 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: ["/sitemap.xml"]
+    },
+    cloudflare: {
+      pages: {
+        routes: {
+          exclude: ["/images/*"]
+        }
+      }
+    },
+    experimental: {
+      tasks: true
     }
   },
   sitemap: {
+    discoverImages: false,
     xslColumns: [
       { label: "URL", width: "65%" },
       { label: "Priority", select: "sitemap:priority", width: "12.5%" },
@@ -57,8 +71,20 @@ export default defineNuxtConfig({
     "/*/**": { sitemap: { priority: 0.8, lastmod: new Date().toISOString() } },
     "/api/_nuxt_icon/**": { cache: { maxAge: 1.577e+7 } }
   },
+  features: {
+    inlineStyles: false
+  },
   experimental: {
     typedPages: true
   },
-  devtools: { enabled: true }
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler",
+          silenceDeprecations: ["mixed-decls", "color-functions"]
+        }
+      }
+    }
+  }
 });

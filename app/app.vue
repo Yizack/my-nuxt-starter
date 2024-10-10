@@ -8,5 +8,6 @@ setScrollBehavior();
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
+    <ControllerToasts />
   </div>
 </template>

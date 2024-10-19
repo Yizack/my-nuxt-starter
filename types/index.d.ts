@@ -1,3 +1,5 @@
+import type { ErrorCode } from "~~/server/utils/errors";
+
 export {};
 
 declare global {
@@ -6,4 +8,5 @@ declare global {
     success: boolean;
     id?: number;
   }
+  type ErrorCode = typeof ErrorCode;
 }

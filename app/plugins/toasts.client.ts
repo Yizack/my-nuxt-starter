@@ -1,3 +1,9 @@
+interface Toast {
+  message: string;
+  success: boolean;
+  id?: number;
+}
+
 class Toasts {
   toasts: Ref<Toast[]> = ref([]);
   id = 1;

@@ -26,7 +26,6 @@ export default defineNuxtConfig({
   ],
   icon: {
     mode: "svg",
-    serverBundle: "remote",
     clientBundle: { scan: true, sizeLimitKb: 2048 }
   },
   eslint: {

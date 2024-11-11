@@ -44,6 +44,8 @@ export default defineNuxtConfig({
   site: { url: "" },
   nitro: {
     prerender: {
+      autoSubfolderIndex: false,
+      crawlLinks: false,
       routes: ["/sitemap.xml"]
     },
     cloudflare: {

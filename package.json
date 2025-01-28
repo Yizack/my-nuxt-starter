@@ -34,7 +34,7 @@
     "eslint": "^9.19.0",
     "nuxt": "^3.15.3",
     "sass": "^1.83.4",
-    "stylelint": "^16.14.0",
+    "stylelint": "^16.14.1",
     "stylelint-config-standard-scss": "^14.0.0",
     "typescript": "^5.7.3",
     "vue-tsc": "^2.2.0"

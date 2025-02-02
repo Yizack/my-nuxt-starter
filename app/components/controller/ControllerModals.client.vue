@@ -1,17 +1,15 @@
 <script setup lang="ts">
-interface ControllerModalModel {
-  isVisible: boolean;
-  show: (callback?: VoidFunction) => Promise<void>;
-  hide: VoidFunction;
-}
-
-defineProps({
-  modelValue: { type: Object as () => ControllerModalModel, required: true },
-  id: { type: String, required: true },
-  title: { type: String, default: "" },
-  lg: { type: Boolean, default: false },
-  fullscreen: { type: Boolean, default: false }
-});
+defineProps<{
+  modelValue: {
+    isVisible: boolean;
+    show: (callback?: VoidFunction) => Promise<void>;
+    hide: VoidFunction;
+  };
+  id: string;
+  title?: string;
+  lg?: boolean;
+  fullscreen?: boolean;
+}>();
 </script>
 
 <template>

@@ -18,26 +18,27 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "pnpm lint:eslint --fix && pnpm lint:stylelint --fix",
+    "lint": "pnpm lint:eslint && pnpm lint:stylelint",
+    "lint:fix": "pnpm lint:eslint --fix && pnpm lint:stylelint --fix",
     "lint:eslint": "eslint --config .config/eslint.mjs",
-    "lint:stylelint": "stylelint \"**/*.{css,scss,sass}\" --config .config/stylelint.json",
     "lint:eslint:inspect": "npx @eslint/config-inspector --config .config/eslint.mjs",
+    "lint:stylelint": "stylelint \"**/*.{css,scss,sass}\" --config .config/stylelint.json",
     "test:types": "vue-tsc --noEmit"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^0.7.5",
+    "@nuxt/eslint": "^1.0.0",
     "@nuxt/icon": "^1.10.3",
     "@nuxtjs/color-mode": "^3.5.2",
-    "@nuxtjs/sitemap": "^7.2.3",
+    "@nuxtjs/sitemap": "^7.2.4",
     "@types/bootstrap": "^5.2.10",
     "bootstrap": "^5.3.3",
     "eslint": "^9.19.0",
-    "nuxt": "^3.15.3",
+    "nuxt": "^3.15.4",
     "sass": "^1.83.4",
     "stylelint": "^16.14.1",
     "stylelint-config-standard-scss": "^14.0.0",
     "typescript": "^5.7.3",
     "vue-tsc": "^2.2.0"
   },
-  "packageManager": "pnpm@9.15.4"
+  "packageManager": "pnpm@9.15.5"
 }

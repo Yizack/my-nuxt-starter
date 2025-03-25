@@ -1,6 +1,6 @@
 # my-nuxt-starter
 
-My minimal Nuxt + Typescript + Bootstrap starter template for creating webapps.
+My minimal Nuxt + Typescript + Bootstrap starter template for creating web apps.
 
 ## Features
 - PNPM package manager

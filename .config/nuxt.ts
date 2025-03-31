@@ -1,6 +1,7 @@
 export default defineNuxtConfig({
   future: { compatibilityVersion: 4 },
   devtools: { enabled: true },
+
   app: {
     head: {
       charset: "utf-8",
@@ -15,33 +16,41 @@ export default defineNuxtConfig({
       ]
     }
   },
+
   css: [
     "~/assets/scss/app.scss"
   ],
+
   modules: [
     "@nuxt/eslint",
     "@nuxt/icon",
     "@nuxtjs/color-mode",
     "@nuxtjs/sitemap"
   ],
+
   icon: {
     mode: "svg",
     clientBundle: { scan: true, sizeLimitKb: 2048 }
   },
+
   eslint: {
     config: {
       autoInit: false,
       stylistic: true
     }
   },
+
   runtimeConfig: {},
+
   colorMode: {
     preference: "light",
     fallback: "light",
     dataValue: "bs-theme",
     storageKey: "nuxt-color-mode"
   },
+
   site: { url: "" },
+
   nitro: {
     prerender: {
       autoSubfolderIndex: false,
@@ -59,6 +68,7 @@ export default defineNuxtConfig({
       tasks: true
     }
   },
+
   sitemap: {
     discoverImages: false,
     xslColumns: [
@@ -67,16 +77,20 @@ export default defineNuxtConfig({
       { label: "Last Modified", select: "sitemap:lastmod", width: "35%" }
     ]
   },
+
   routeRules: {
     "/": { sitemap: { priority: 1 } },
     "/*/**": { sitemap: { priority: 0.8, lastmod: new Date().toISOString() } }
   },
+
   features: {
     inlineStyles: false
   },
+
   experimental: {
     typedPages: true
   },
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -86,5 +100,7 @@ export default defineNuxtConfig({
         }
       }
     }
-  }
+  },
+
+  compatibilityDate: "2025-03-31"
 });

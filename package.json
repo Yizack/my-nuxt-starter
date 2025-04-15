@@ -2,16 +2,19 @@
   "name": "my-nuxt-starter",
   "version": "1.0.0",
   "description": "Yizack nuxt template",
-  "author": "Yizack Rangel",
   "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Yizack Rangel",
+    "email": "yizackr@gmail.com",
+    "url": "https://yizack.com"
+  },
   "homepage": "https://github.com/Yizack/my-nuxt-starter",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Yizack/my-nuxt-starter"
+    "url": "git+https://github.com/Yizack/my-nuxt-starter.git"
   },
-  "bugs": {
-    "url": "https://github.com/Yizack/my-nuxt-starter/issues"
-  },
+  "bugs": "https://github.com/Yizack/my-nuxt-starter/issues",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev --port=5173 --host",
@@ -27,18 +30,18 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.3.0",
-    "@nuxt/icon": "^1.11.0",
+    "@nuxt/icon": "^1.12.0",
     "@nuxtjs/color-mode": "^3.5.2",
-    "@nuxtjs/sitemap": "^7.2.9",
+    "@nuxtjs/sitemap": "^7.2.10",
     "@types/bootstrap": "^5.2.10",
     "bootstrap": "^5.3.5",
     "eslint": "^9.24.0",
     "nuxt": "^3.16.2",
     "sass": "^1.86.3",
-    "stylelint": "^16.17.0",
+    "stylelint": "^16.18.0",
     "stylelint-config-standard-scss": "^14.0.0",
     "typescript": "^5.8.3",
     "vue-tsc": "^2.2.8"
   },
-  "packageManager": "pnpm@10.7.1"
+  "packageManager": "pnpm@10.8.1"
 }

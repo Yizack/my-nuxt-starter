@@ -88,7 +88,8 @@ export default defineNuxtConfig({
   },
 
   experimental: {
-    typedPages: true
+    typedPages: true,
+    purgeCachedData: false // keep payload cache on navigation
   },
 
   vite: {

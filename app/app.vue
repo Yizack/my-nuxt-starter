@@ -13,6 +13,6 @@ $router.options.scrollBehavior = to => new Promise((resolve) => {
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-    <ControllerToasts />
+    <BsToasts />
   </div>
 </template>

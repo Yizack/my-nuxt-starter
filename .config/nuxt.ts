@@ -88,8 +88,7 @@ export default defineNuxtConfig({
   },
 
   experimental: {
-    typedPages: true,
-    purgeCachedData: false // keep payload cache on navigation
+    typedPages: true
   },
 
   vite: {
@@ -103,5 +102,5 @@ export default defineNuxtConfig({
     }
   },
 
-  compatibilityDate: "2025-03-31"
+  compatibilityDate: "2025-05-05"
 });

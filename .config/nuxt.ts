@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  // future: { compatibilityVersion: 4 },
+  // future: { compatibilityVersion: 5 },
   devtools: { enabled: true },
 
   app: {
@@ -72,6 +72,9 @@ export default defineNuxtConfig({
   sitemap: {
     discoverImages: false,
     defaults: { priority: 0.8, lastmod: new Date().toISOString() },
+    urls: [
+      { loc: "/", priority: 1 }
+    ],
     xslColumns: [
       { label: "URL", width: "65%" },
       { label: "Priority", select: "sitemap:priority", width: "12.5%" },
@@ -80,8 +83,6 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    // @ts-expect-error remove once fixed sitemap module
-    "/": { sitemap: { priority: 1 } },
     "/api/_nuxt_icon/**": { cache: { maxAge: 1.577e+7 } }
   },
 
@@ -103,5 +104,5 @@ export default defineNuxtConfig({
     }
   },
 
-  compatibilityDate: "2025-07-22"
+  compatibilityDate: "2025-11-03"
 });

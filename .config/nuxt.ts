@@ -1,5 +1,13 @@
 export default defineNuxtConfig({
   // future: { compatibilityVersion: 5 },
+
+  modules: [
+    "@nuxt/eslint",
+    "@nuxt/icon",
+    "@nuxtjs/color-mode",
+    "@nuxtjs/sitemap"
+  ],
+
   devtools: { enabled: true },
 
   app: {
@@ -21,26 +29,7 @@ export default defineNuxtConfig({
     "~/assets/scss/app.scss"
   ],
 
-  modules: [
-    "@nuxt/eslint",
-    "@nuxt/icon",
-    "@nuxtjs/color-mode",
-    "@nuxtjs/sitemap"
-  ],
-
-  icon: {
-    mode: "svg",
-    clientBundle: { scan: true, sizeLimitKb: 2048 }
-  },
-
-  eslint: {
-    config: {
-      autoInit: false,
-      stylistic: true
-    }
-  },
-
-  runtimeConfig: {},
+  site: { url: "" },
 
   colorMode: {
     preference: "light",
@@ -49,7 +38,23 @@ export default defineNuxtConfig({
     storageKey: "nuxt-color-mode"
   },
 
-  site: { url: "" },
+  runtimeConfig: {
+
+  },
+
+  routeRules: {
+    "/api/_nuxt_icon/**": { cache: { maxAge: 1.577e+7 } }
+  },
+
+  features: {
+    inlineStyles: false
+  },
+
+  experimental: {
+    typedPages: true
+  },
+
+  compatibilityDate: "2025-11-03",
 
   nitro: {
     prerender: {
@@ -69,6 +74,28 @@ export default defineNuxtConfig({
     }
   },
 
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          silenceDeprecations: ["color-functions", "import", "global-builtin"]
+        }
+      }
+    }
+  },
+
+  eslint: {
+    config: {
+      autoInit: false,
+      stylistic: true
+    }
+  },
+
+  icon: {
+    mode: "svg",
+    clientBundle: { scan: true, sizeLimitKb: 2048 }
+  },
+
   sitemap: {
     discoverImages: false,
     defaults: { priority: 0.8, lastmod: new Date().toISOString() },
@@ -80,29 +107,5 @@ export default defineNuxtConfig({
       { label: "Priority", select: "sitemap:priority", width: "12.5%" },
       { label: "Last Modified", select: "sitemap:lastmod", width: "35%" }
     ]
-  },
-
-  routeRules: {
-    "/api/_nuxt_icon/**": { cache: { maxAge: 1.577e+7 } }
-  },
-
-  features: {
-    inlineStyles: false
-  },
-
-  experimental: {
-    typedPages: true
-  },
-
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          silenceDeprecations: ["color-functions", "import", "global-builtin"]
-        }
-      }
-    }
-  },
-
-  compatibilityDate: "2025-11-03"
+  }
 });

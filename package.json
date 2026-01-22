@@ -2,7 +2,7 @@
   "private": true,
   "name": "my-nuxt-starter",
   "version": "1.0.0",
-  "description": "Yizack nuxt template",
+  "description": "Yizack Nuxt template",
   "type": "module",
   "license": "MIT",
   "author": {

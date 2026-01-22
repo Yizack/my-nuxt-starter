@@ -30,9 +30,13 @@ declare module "#app" {
   }
 }
 
-export default defineNuxtPlugin(() => {
-  const toasts = new Toasts();
-  return {
-    provide: { toasts }
-  };
+export default defineNuxtPlugin({
+  name: "toasts",
+  parallel: true,
+  async setup () {
+    const toasts = new Toasts();
+    return {
+      provide: { toasts }
+    };
+  }
 });

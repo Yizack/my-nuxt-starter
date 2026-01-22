@@ -1,3 +1,5 @@
+import { SITE } from "../shared/utils/site";
+
 export default defineNuxtConfig({
   // future: { compatibilityVersion: 5 },
 
@@ -14,7 +16,7 @@ export default defineNuxtConfig({
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
-      title: "",
+      title: SITE.name,
       htmlAttrs: {
         lang: "en"
       },
@@ -29,7 +31,9 @@ export default defineNuxtConfig({
     "~/assets/scss/app.scss"
   ],
 
-  site: { url: "" },
+  site: {
+    url: SITE.host
+  },
 
   colorMode: {
     preference: "light",
@@ -106,6 +110,7 @@ export default defineNuxtConfig({
       { label: "URL", width: "65%" },
       { label: "Priority", select: "sitemap:priority", width: "12.5%" },
       { label: "Last Modified", select: "sitemap:lastmod", width: "35%" }
-    ]
+    ],
+    zeroRuntime: true
   }
 });

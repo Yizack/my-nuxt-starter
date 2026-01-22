@@ -1,4 +1,4 @@
-import type { ErrorCode } from "~~/server/utils/errors";
+import type { ErrorCode } from "#shared/utils/errors";
 
 declare global {
   type ErrorCode = typeof ErrorCode;

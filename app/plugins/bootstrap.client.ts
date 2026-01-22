@@ -85,9 +85,14 @@ declare module "#app" {
   }
 }
 
-export default defineNuxtPlugin(() => {
-  const bootstrap = new Bootstrap();
-  return {
-    provide: { bootstrap }
-  };
+export default defineNuxtPlugin({
+  name: "bootstrap",
+  parallel: true,
+  async setup () {
+    const bootstrap = new Bootstrap();
+    bootstrap.hideModalEscEvent();
+    return {
+      provide: { bootstrap }
+    };
+  }
 });

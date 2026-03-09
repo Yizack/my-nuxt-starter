@@ -1,10 +1,10 @@
 import { SITE } from "../shared/utils/site";
+import icons from "./icons";
 
 export default defineNuxtConfig({
   // future: { compatibilityVersion: 5 },
 
   modules: [
-    "@nuxt/eslint",
     "@nuxt/icon",
     "@nuxtjs/color-mode",
     "@nuxtjs/sitemap"
@@ -43,11 +43,9 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-
-  },
-
-  routeRules: {
-    "/api/_nuxt_icon/**": { cache: { maxAge: 1.577e+7 } }
+    secure: {
+      secret: ""
+    }
   },
 
   features: {
@@ -58,7 +56,7 @@ export default defineNuxtConfig({
     typedPages: true
   },
 
-  compatibilityDate: "2025-11-03",
+  compatibilityDate: "2026-03-09",
 
   nitro: {
     prerender: {
@@ -88,16 +86,13 @@ export default defineNuxtConfig({
     }
   },
 
-  eslint: {
-    config: {
-      autoInit: false,
-      stylistic: true
-    }
-  },
-
   icon: {
     mode: "svg",
-    clientBundle: { scan: true, sizeLimitKb: 2048 }
+    provider: "none",
+    clientBundle: { icons },
+    customCollections: [
+      { prefix: "custom", dir: "./app/assets/icons" }
+    ]
   },
 
   sitemap: {
